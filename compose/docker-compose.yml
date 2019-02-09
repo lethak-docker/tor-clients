@@ -2,10 +2,10 @@
 
 version: '3'
 services:
-  "1": { image: "lethak/tor-clients:latest", ports: ["11050:11050"], networks: ["main"] }
-  "2": { image: "lethak/tor-clients:latest", ports: ["11052:11050"], networks: ["main"] }
-  "3": { image: "lethak/tor-clients:latest", ports: ["11054:11050"], networks: ["main"] }
-  "4": { image: "lethak/tor-clients:latest", ports: ["11056:11050"], networks: ["main"] }
+  "1": { image: "lethak/tor-clients:latest", ports: ["11050:9050"], networks: ["main"] }
+  "2": { image: "lethak/tor-clients:latest", ports: ["11052:9050"], networks: ["main"] }
+  "3": { image: "lethak/tor-clients:latest", ports: ["11054:9050"], networks: ["main"] }
+  "4": { image: "lethak/tor-clients:latest", ports: ["11056:9050"], networks: ["main"] }
 
 
 ############

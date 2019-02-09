@@ -10,13 +10,13 @@ Run minimalist containers to connect with the Tor network with multiple circuits
 @see https://docs.docker.com/engine/reference/commandline/run/
 
 ```bash
-docker run --rm --name tor1 --publish "127.0.0.1:11050:11050" "lethak/tor-clients:latest"
-docker run --rm --name tor2 --publish "127.0.0.1:11052:11050" "lethak/tor-clients:latest"
-docker run --rm --name tor3 --publish "127.0.0.1:11054:11050" "lethak/tor-clients:latest"
-docker run --rm --name tor4 --publish "127.0.0.1:11056:11050" "lethak/tor-clients:latest"
+docker run --rm --name tor1 --publish "127.0.0.1:11050:9050" "lethak/tor-clients:latest"
+docker run --rm --name tor2 --publish "127.0.0.1:11052:9050" "lethak/tor-clients:latest"
+docker run --rm --name tor3 --publish "127.0.0.1:11054:9050" "lethak/tor-clients:latest"
+docker run --rm --name tor4 --publish "127.0.0.1:11056:9050" "lethak/tor-clients:latest"
 ```
 
-The last exemple binds port 11050 of the container to TCP port 11056 on 127.0.0.1 of the host machine. You can also specify udp and sctp ports like `127.0.0.1:11056:11050/tcp`. 
+The last exemple binds port 9050 of the container to TCP port 11056 on 127.0.0.1 of the host machine. You can also specify udp and sctp ports like `127.0.0.1:11056:9050/tcp`. 
 
 
 ### Docker compose (optional)
@@ -44,6 +44,8 @@ curl --socks5 127.0.0.1:11052 http://checkip.amazonaws.com
 curl --socks5 127.0.0.1:11054 http://checkip.amazonaws.com
 curl --socks5 127.0.0.1:11056 http://checkip.amazonaws.com
 ```
+
+
 
 ### Docker image build commands (for contributor)
 

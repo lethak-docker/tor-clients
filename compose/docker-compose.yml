@@ -1,0 +1,21 @@
+# ports: host:container
+
+version: '3'
+services:
+  "1": { image: "lethak/tor-clients:latest", ports: ["11050:11050"], networks: ["main"] }
+  "2": { image: "lethak/tor-clients:latest", ports: ["11052:11050"], networks: ["main"] }
+  "3": { image: "lethak/tor-clients:latest", ports: ["11054:11050"], networks: ["main"] }
+  "4": { image: "lethak/tor-clients:latest", ports: ["11056:11050"], networks: ["main"] }
+
+
+############
+# NETWORKS #
+############
+
+networks:
+    main:
+        ipam:
+          driver: default
+          config:
+          -
+            subnet: 192.168.5.1/24

@@ -16,7 +16,7 @@ docker run --rm --name tor3 --publish "127.0.0.1:11054:9050" "lethak/tor-clients
 docker run --rm --name tor4 --publish "127.0.0.1:11056:9050" "lethak/tor-clients:latest"
 ```
 
-The last exemple binds port 9050 of the container to TCP port 11056 on 127.0.0.1 of the host machine. You can also specify udp and sctp ports like `127.0.0.1:11056:9050/tcp`. 
+The last example binds port 9050 of the container to TCP port 11056 on 127.0.0.1 of the host machine. You can also specify udp and tcp ports like `127.0.0.1:11056:9050/tcp`. 
 
 
 ### Docker compose (optional)
